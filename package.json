@@ -1,13 +1,48 @@
 {
-  "name": "haelth",
+  "name": "server",
   "version": "1.0.0",
-  "description": "<h3 align=\"center\">   <img align=\"center\" src=\"./client/public/logo.png\" alt=\"logo\" width=\"250\"></a>   <h1 align=\"center\">So the Doctors can focus on YOU</h1> </h3>",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "engines": {
+    "node": "v8.11.1",
+    "npm": "5.6.0",
+    "yarn": "1.7.0"
   },
-  "keywords": [],
+  "description": "",
+  "main": "server",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node ./server",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-prebuild": "yarn install --production=false",
+    "heroku-postbuild": "npm run build"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dependencies": "0.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.0.3",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "peer": "^0.2.8",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  }
 }
