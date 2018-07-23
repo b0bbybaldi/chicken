@@ -6,7 +6,7 @@
     "npm": "5.6.0",
     "yarn": "1.7.0"
   },
-  "description": "",
+  "description": "<h3 align=\"center\">   <img align=\"center\" src=\"./client/public/logo.png\" alt=\"logo\" width=\"250\"></a>   <h1 align=\"center\">So the Doctors can focus on YOU</h1> </h3>",
   "main": "server",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -31,7 +31,6 @@
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
-    "dependencies": "0.0.1",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "express-validator": "^5.0.3",
@@ -39,10 +38,18 @@
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "peer": "^0.2.8",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b0bbybaldi/chicken.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/b0bbybaldi/chicken/issues"
+  },
+  "homepage": "https://github.com/b0bbybaldi/chicken#readme"
 }
